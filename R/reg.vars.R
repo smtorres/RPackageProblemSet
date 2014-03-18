@@ -20,6 +20,7 @@
 #' @export
 reg.vars<-function(y,x){
   require(combinat)
+  require(plyr)
   b<-NULL
   a<-ncol(x)
   for(i in 1:ncol(x)){
