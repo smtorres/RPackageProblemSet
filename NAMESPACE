@@ -1,3 +1,7 @@
 export(average.rsqr)
+export(getreg.coeffs)
 export(reg.vars)
 export(sig.store)
+exportClasses(reg.coeffs)
+exportMethods(getreg.coeffs)
+exportMethods(initialize)
