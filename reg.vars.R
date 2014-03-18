@@ -14,7 +14,7 @@
 #' 
 #' myX <- matrix(c(2,1,8,3,6,7,9,3,6,1,8,3,6,9,3,6), ncol=4) 
 #' myY <- myX[,3]*3.5
-#' (myX, myY)
+#' reg.vars(myX, myY)
 #' @seealso \code{\link{sig.store}}
 #' @rdname reg.vars
 #' @export
