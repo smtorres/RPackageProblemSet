@@ -10,3 +10,5 @@ read.table(exampleDataset.rda)
 mat<-matrix(c(3,6,7,2,3,6,1,6,1), ncol=3)
 dy<-mat[,2]*2.6
 reg.vars(dy,mat)
+sig.store(dy,mat)
+average.rsqr(dy,mat)
