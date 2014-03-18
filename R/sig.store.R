@@ -6,14 +6,14 @@
 #' @param x A matrix with a number of rows equal to dimensionality of \code{y}.
 #'
 #' @return A list with the elements
-#'  \item{sig.store}{Matrix with 1 if the coefficient is significant or 0 otherwise}
+#'  \item{matrix}{Matrix with 1 if the coefficient is significant or 0 otherwise}
 #' @author Michelle Torres
-#' @note  
+#' @note  Use it wisely
 #' @examples
 #' 
 #' myX <- matrix(c(2,1,8,3,6,7,9,3,6,1,8,3,6,9,3,6), ncol=4) 
 #' myY <- myX[,3]*3.5
-#' sig.store(myX, myY)
+#' sig.store(myY, myX)
 #' @seealso \code{\link{reg.vars}}
 #' @rdname reg.vars
 #' @export
@@ -24,7 +24,6 @@ sig.store<-function(y,x){
   }
   vars[[ncol(x)]]<-as.matrix(vars[[ncol(x)]])
   covs.sigs<-list()
-  ####  
   sig.covs<-function(mat, ind, dep){
     cov.names<-paste0("x", 1:ncol(mat))
     colnames(mat)<-cov.names
@@ -40,7 +39,6 @@ sig.store<-function(y,x){
     names(output)<-"Coefficients"
     return(output)
   }
-  ##
   for (i in 1:length(vars)){
     covs.sigs[[i]]<-apply(vars[[i]], 2, FUN=sig.covs, mat=x, dep=y)
   }

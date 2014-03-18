@@ -1,0 +1,12 @@
+Package: RPackageProblemSet
+Title: Running regressions and storing coefficients
+Version: 0.1
+Author: Michelle Torres
+Maintainer: Michelle Torres <smtorres@wustl.edu>
+Description: Run regressions based on a matrix of covariates and a dependent
+    variable
+Depends:
+    R (>= 3.0.0)
+License: GPL (>= 2)
+Suggests:
+    devtools

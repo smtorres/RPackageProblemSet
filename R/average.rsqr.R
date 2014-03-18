@@ -8,16 +8,18 @@
 #' @return A list with the elements
 #'  \item{numeric}{Vector with R average of the models including each covariate}
 #' @author Michelle Torres
-#' @note  
+#' @note  Use it wisely
 #' @examples
 #' 
 #' myX <- matrix(c(2,1,8,3,6,7,9,3,6,1,8,3,6,9,3,6), ncol=4) 
 #' myY <- myX[,3]*3.5
-#' average.rsqr(myX, myY)
+#' average.rsqr(myY, myX)
 #' @seealso \code{\link{reg.vars}}
 #' @rdname reg.vars
 #' @export
 average.rsqr<-function(y,x){
+  require(combinat)
+  require(plyr)
   new2<-cbind(reg.vars(y,x)[[1]], reg.vars(y,x)[[2]])
   new3<-new2[,2:(ncol(x)+1)]
   r.sqr<-new2[,(ncol(x))+2]

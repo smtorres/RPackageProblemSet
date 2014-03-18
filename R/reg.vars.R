@@ -6,15 +6,15 @@
 #' @param x A matrix with a number of rows equal to dimensionality of \code{y}.
 #'
 #' @return A list with the elements
-#'  \item{Coeffs}{Matrix with the coefficients for all regressions computed}
-#'  \item{R-squared}{Vector with the R-squared of every regression computed}
+#'  \item{matrix}{Matrix with the coefficients for all regressions computed}
+#'  \item{numeric}{Vector with the R-squared of every regression computed}
 #' @author Michelle Torres
-#' @note  
+#' @note Use it wisely
 #' @examples
 #' 
 #' myX <- matrix(c(2,1,8,3,6,7,9,3,6,1,8,3,6,9,3,6), ncol=4) 
 #' myY <- myX[,3]*3.5
-#' (myX, myY)
+#' reg.vars(myY, myX)
 #' @seealso \code{\link{sig.store}}
 #' @rdname reg.vars
 #' @export
